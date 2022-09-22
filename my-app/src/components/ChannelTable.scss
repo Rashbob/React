@@ -15,6 +15,12 @@
   background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
 }
 
+form{
+  input{
+    display:none
+  }
+}
+
 .AddEntry{
   border: none;
   text-decoration: none;

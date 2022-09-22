@@ -1,16 +1,19 @@
-import Reach, {useState} from "react";
-import {nanoid} from "nanoid";
+import React, {useState} from "react";
 import './ChannelTable.scss';
 import data from "./mock-table-data.json"
 import {BsFillPlusCircleFill} from 'react-icons/bs';
+
+//x will be the id since mock value starts at 3
+let x = 4;
+
 
 const Table = () =>{
     //Takes the data from the mock-table-data.json and sets the data into the table
     const [timeData, setTime] = useState(data);
     //This retrieves the new time data to be put into the rows
     const [addTimeData, setAddTimeData] = useState({
-        timeStart:'',
-        timeEnd:'',
+        startTime:'',
+        endTime:'',
         minStart:'',
         minEnd:'',
     })
@@ -33,28 +36,44 @@ const Table = () =>{
         event.preventDefault();
 
         const newSetTime = {
-            id:nanoid(),
-            timeStart: addTimeData.timeStart,
-            timeEnd: addTimeData.timeEnd,
+            id: x,
+            startTime: addTimeData.startTime,
+            endTime: addTimeData.endTime,
             minStart: addTimeData.minStart,
             minEnd: addTimeData.minEnd,
         };
 
+
+
         const newTime = [...timeData, newSetTime ]
         setTime(newTime);
+
+        //value of x is increased to be an increasing id value
+        x++;
     };
+
+    const handleDeleteTime = (onDelete) =>{
+        const newTimeData = [...timeData];
+
+        const index = timeData.findIndex((time)=> time.id === onDelete)
+
+        newTimeData.splice(index, 1);
+
+        setTime(newTimeData);
+    }
 
     return(
             <div>
                 <table>
                     <tbody>
-                    {timedata.map((time)=> (
+                    {timeData.map((time)=> (
                         <tr>
-                        <td>ID:         {time.id}</td>
-                        <td>START:      {time.startTime}</td>
-                        <td>END:        {time.endTime}</td>
-                        <td>MIN START:  {time.minStart}</td>
-                        <td>MIN END:    {time.minEnd}</td>
+                        <td>ID:      <input value={time.id} type="number"/>   </td>
+                        <td>START:     <input value={time.startTime} type="number"/> </td>
+                        <td>END:       <input value={time.endTime} type="number"/> </td>
+                        <td>MIN START: <input value={time.minStart} type="number"/>  %</td>
+                        <td>MIN END:   <input value={time.minEnd} type="number"/>  %</td>
+                        <td><button type={"button"} onClick={(event)=>handleDeleteTime(time.id)}>X</button></td>
                      </tr>
                     ))}
                     </tbody>
@@ -62,31 +81,31 @@ const Table = () =>{
                     {/*onChange property helps React pass the event call for us */}
                     <form onSubmit={handleAddTimeDataSubmit}>
                         <input
+                            className="tableInputs"
                             type="number"
-                            name="time.startTime"
-                            required="required"
+                            name="startTime"
                             onChange={handleAddTimeData}
                             />
                         <input
+                            className="tableInputs"
                             type="number"
-                            name="time.endTime"
-                            required="required"
+                            name="endTime"
                             onChange={handleAddTimeData}
                             />
                         <input
+                            className="tableInputs"
                             type="number"
-                            name="time.minStart"
-                            required="required"
+                            name="minStart"
                             onChange={handleAddTimeData}
                             />
                         <input
+                            className="tableInputs"
                             type="number"
-                            name="time.minEnd"
-                            required="required"
+                            name="minEnd"
                             onChange={handleAddTimeData}
                             />
+                        <button type="submit"><BsFillPlusCircleFill/> </button>
                     </form>
-                <button type="submit"><BsFillPlusCircleFill/> </button>
         </div>
     );
 }

@@ -10,7 +10,7 @@ function Channels() {
             <div className="ChannelSelect">
                 <div className="ChannelBtn">
                 <button type="button" className="SpeedBtn"> <span onClick={disable} className="disable"> X </span>Speed</button>
-                <button type="button" className="ChannelBtn1">Channel A</button>
+                <button type="button" className="ChannelBtn1" onClick="this.disabled=true">Channel A</button>
                 <button type="button" className="ChannelBtn2">Channel B</button>
                 <button type="button" className="ChannelBtn3">Channel C</button>
                 <button type="button" className="ChannelBtn4">Channel D</button>
