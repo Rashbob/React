@@ -1,0 +1,107 @@
+//Styles for the Channels class
+.Channels {
+  font-weight: bold;
+  display: inline-flex;
+  color : black;
+
+  -webkit-background-clip: padding-box; /* for Safari */
+  background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+}
+
+// Styles for the p tag
+.p{
+  display:inline-block;
+}
+
+//Styles for choosing a channel
+.ChannelSelect{
+  font-weight: bold;
+  display:flex;
+  color : blue;
+  border: 3px solid rgb(25,34, 25);
+  border: 3px solid rgba(25,34, 25, 0.28);
+  border-radius: 5px;
+  padding:5px 0px;
+  width:95%;
+  length:30%;
+
+  -webkit-background-clip: padding-box; /* for Safari */
+  background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+}
+
+//Styles for the dropdown list
+.ChannelChoice{
+  display: none;
+  margin: 15px 15px;
+}
+
+.Dropbtn{
+  background:none;
+  border: none;
+  width: 5px;
+  length:5px;
+  cursor: pointer;
+  margin: 0px 15px;
+
+}
+
+//Styles for the channel buttons
+.ChannelBtn{
+  padding: 0px 15px;
+}
+
+.SpeedBtn{
+  text-decoration: none;
+  border-radius: 40%;
+  height: 40px;
+  margin: 0px 10px;
+  background-color : orange;
+  color: white;
+  cursor:pointer;
+}
+
+.ChannelBtn1{
+  text-decoration: none;
+  border-radius: 40%;
+  height: 40px;
+  margin: 0px 10px;
+  background-color : red;
+  color: white;
+  cursor:pointer;
+}
+
+.ChannelBtn2{
+  text-decoration: none;
+  border-radius: 40%;
+  height: 40px;
+  margin: 0px 10px;
+  background-color: purple;
+  color: white;
+  cursor:pointer;
+}
+
+.ChannelBtn3{
+  text-decoration: none;
+  border-radius: 40%;
+  height: 40px;
+  margin: 0px 10px;
+  background-color: blue;
+  color: white;
+  cursor:pointer;
+}
+.ChannelBtn4{
+  text-decoration: none;
+  border-radius: 40%;
+  height: 40px;
+  margin: 0px 10px;
+  background-color: green;
+  color: white;
+  cursor:pointer;
+}
+
+//This is for the dropdown button
+.SquareBtn{
+  height: 30px;
+  width: 30px;
+}
+

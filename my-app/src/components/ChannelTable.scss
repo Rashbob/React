@@ -1,0 +1,29 @@
+.Table {
+  font-weight: bold;
+  justify-content: center;
+  text-align: center;
+  display: inline-flex;
+  color : black;
+  border: 3px solid rgb(25,34, 25);
+  border: 3px solid rgba(25,34, 25, 0.28);
+  border-radius: 5px;
+  width:95%;
+  length:30%;
+
+
+  -webkit-background-clip: padding-box; /* for Safari */
+  background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+}
+
+.AddEntry{
+  border: none;
+  text-decoration: none;
+  background: none;
+  cursor: pointer;
+  display:flex;
+}
+
+.CircleBtn{
+  width: 30px;
+  height: 30px;
+}
