@@ -24,8 +24,25 @@ const Channels = () => {
         }
     }
 
-    const Disabled = () =>{
-        document.getElementById("disableBtn").disabled = true;
+    const Disabled1 = () =>{
+        console.log("button is disabled")
+        document.getElementById("disableBtn1").disabled = true;
+    }
+    const Disabled2 = () =>{
+        console.log("button is disabled")
+        document.getElementById("disableBtn2").disabled = true;
+    }
+    const Disabled3 = () =>{
+        console.log("button is disabled")
+        document.getElementById("disableBtn3").disabled = true;
+    }
+    const Disabled4 = () =>{
+        console.log("button is disabled")
+        document.getElementById("disableBtn4").disabled = true;
+    }
+    const Disabled5 = () =>{
+        console.log("button is disabled")
+        document.getElementById("disableBtn5").disabled = true;
     }
 
 
@@ -36,15 +53,15 @@ const Channels = () => {
             </div>
             <div className="ChannelSelect">
                 <div className="ChannelBtn">
-                    <button type="button" onClick={Disabled} className="SpeedBtn" id="disableBtn">
+                    <button type="button" className="SpeedBtn" id="disableBtn1" onClick={Disabled1} >
                         <span className="Crossbtn">X</span> Speed</button>
-                    <button type="button" onClick={Disabled} className="ChannelBtn1" id="disableBtn">
+                    <button type="button" className="ChannelBtn1" id="disableBtn2" onClick={Disabled2} >
                         <span className="Crossbtn">X</span> Channel A</button>
-                    <button type="button" onClick={Disabled} className="ChannelBtn2" id="disableBtn">
+                    <button type="button" className="ChannelBtn2" id="disableBtn3" onClick={Disabled3} >
                         <span className="Crossbtn">X</span> Channel B</button>
-                    <button type="button" onClick={Disabled} className="ChannelBtn3" id="disableBtn">
-                        <span className="Crossbtn">X</span> Channel C</button>
-                    <button type="button" onClick={Disabled} className="ChannelBtn4" id="disableBtn">
+                    <button type="button" className="ChannelBtn3" id="disableBtn4" onClick={Disabled4} >
+                        <span className="Crossbtn">X</span> Channel C </button>
+                    <button type="button" className="ChannelBtn4" id="disableBtn5"onClick={Disabled5} >
                         <span className="Crossbtn">X</span> Channel D</button>
                 </div>
                 <div>

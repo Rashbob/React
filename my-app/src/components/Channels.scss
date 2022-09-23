@@ -100,6 +100,9 @@
   color: white;
   cursor:pointer;
 }
+.SpeedBtn:disabled{
+  background-color: rgba(255, 165, 0, 0.34);
+}
 
 .ChannelBtn1{
   text-decoration: none;
@@ -110,6 +113,9 @@
   background-color : red;
   color: white;
   cursor:pointer;
+}
+.ChannelBtn1:disabled{
+  background-color: rgba(255, 0, 0, 0.34);
 }
 
 .ChannelBtn2{
@@ -122,7 +128,9 @@
   color: white;
   cursor:pointer;
 }
-
+.ChannelBtn2:disabled{
+  background-color: rgba(128, 0, 128, 0.34);;
+}
 .ChannelBtn3{
   text-decoration: none;
   border: none;
@@ -133,6 +141,9 @@
   color: white;
   cursor:pointer;
 }
+.ChannelBtn3:disabled{
+  background-color: rgba(0, 0, 255, 0.34);
+}
 .ChannelBtn4{
   text-decoration: none;
   border: none;
@@ -142,6 +153,10 @@
   background-color: green;
   color: white;
   cursor:pointer;
+  cursor:pointer;
+}
+.ChannelBtn4:disabled{
+  background-color: rgba(0, 128, 0, 0.34);
 }
 
 .Crossbtn{
