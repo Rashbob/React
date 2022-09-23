@@ -1,3 +1,22 @@
+#webpack configuration
+using the command 'npx create-react-app'
+
+#Compiled layout
+I'm slightly unsure of what a compiled layout is but all components reside in the component folder/directory.
+Each component is called by it's respective parent component and then called by the App.js file.
+
+#Layout
+Channels.js handles the channel buttons and the dropdown.
+
+ChannelGraph.js imports GraphChart.js. GraphChart.js is the child component of ChannelGraph.js and handles the drawing of the SVG graph.
+
+Table.js handles all functions for the table slices and imports mock data from mock-table-data.
+
+mock-table-data stores mock data for the entry table. I wasn't able to pull my mock data from the json to be displayed on the graph.
+
+Each .scss file is named to it's respective .js counterpart.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
