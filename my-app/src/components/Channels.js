@@ -1,61 +1,69 @@
-import React from 'react';
+import * as React from 'react';
 import './Channels.scss';
+import * as PropTypes from "prop-types";
 
 
-function Channels() {
+
+const Channels = () => {
+
+    const dropDown = ()=> {
+        document.getElementById("dropDown").classList.toggle("show");
+    }
+
+    window.onclick= function(event){
+        if(!event.target.matches('.Dropbtn')){
+            let dropdowns = document.getElementsByClassName("dropdown-content");
+            let i;
+            for(i = 0; i< dropdowns.length; i++)
+            {
+                let openDropdown = dropdowns[i];
+                if(openDropdown.classList.contains('show')){
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+
+    const Disabled = () =>{
+        document.getElementById("disableBtn").disabled = true;
+    }
+
+
     return (
-        <div  className="Channels">
+        <div className="Channels">
             <div className="p">
-             Selected Channels
+                Selected Channels
             </div>
             <div className="ChannelSelect">
                 <div className="ChannelBtn">
-                <button type="button" className="SpeedBtn">Speed</button>
-                <button type="button" className="ChannelBtn1">Channel A</button>
-                <button type="button" className="ChannelBtn2">Channel B</button>
-                <button type="button" className="ChannelBtn3">Channel C</button>
-                <button type="button" className="ChannelBtn4">Channel D</button>
+                    <button type="button" onClick={Disabled} className="SpeedBtn" id="disableBtn">
+                        <span className="Crossbtn">X</span> Speed</button>
+                    <button type="button" onClick={Disabled} className="ChannelBtn1" id="disableBtn">
+                        <span className="Crossbtn">X</span> Channel A</button>
+                    <button type="button" onClick={Disabled} className="ChannelBtn2" id="disableBtn">
+                        <span className="Crossbtn">X</span> Channel B</button>
+                    <button type="button" onClick={Disabled} className="ChannelBtn3" id="disableBtn">
+                        <span className="Crossbtn">X</span> Channel C</button>
+                    <button type="button" onClick={Disabled} className="ChannelBtn4" id="disableBtn">
+                        <span className="Crossbtn">X</span> Channel D</button>
                 </div>
                 <div>
-                <button type="button" onClick={dropDown} className="Dropbtn">+</button>
-                    <div id="ChannelChoiceID"className="ChannelChoice">
-                    <select >
-                        <option>Speed</option>
-                        <option>Channel A</option>
-                        <option>Channel B</option>
-                        <option>Channel C</option>
-                        <option>Channel D</option>
-                    </select>
+                    <button type="button" onClick={dropDown} className="Dropbtn">+</button>
+                    <div id="dropDown" className="DropDownContent">
+                        <a href="#">Speed</a>
+                        <a href="#">Channel A</a>
+                        <a href="#">Channel B</a>
+                        <a href="#">Channel C</a>
+                        <a href="#">Channel D</a>
                     </div>
                 </div>
             </div>
         </div>
     );
-}
 
-function disable(){
-    let id = document.getElementsByClassName("disable");
-    console.log(id);
-}
 
-//When the button is clicked it, this should toggle the dropdown
-function dropDown(){
-    let id = document.getElementsByClassName("ChannelChoice");
-    console.log(id);
-}
 
-//This is to close the dropdown if the user clicks anywhere on the webpage
-window.onclick = function(event) {
-    if (!event.target.matches('.Dropbtn')) {
-        let dropdowns = document.getElementsByClassName("ChannelChoice");
-        let i;
-        for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-            }
-        }
-    }
-}
 
+
+}
 export default Channels;

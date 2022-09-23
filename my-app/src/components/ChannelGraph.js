@@ -4,10 +4,10 @@ import './ChannelGraph.scss';
 import GraphChart from "./GraphChart";
 
 class Graphs extends Component{
-    graphArray = (total= 10) => {
+    graphArray = (total= 200) => {
         let data = []
         for (let el = 0; el < total; el ++) {
-            const y =  50;
+            const y = Math.floor(Math.random()*50) + 50;
             const obj = {
                 x: el,
                 y,
@@ -20,9 +20,7 @@ class Graphs extends Component{
     render() {
         return(
             <div className="Graph">
-                <div>
-                    Selected Channels on Graph
-                </div>
+                <h5>Selected Channels on Graph</h5>
                 <GraphChart data={this.graphArray()}/>
             </div>
         )

@@ -1,11 +1,16 @@
 //Styles for the Channels class
 .Channels {
   font-weight: bold;
-  display: inherit;
+  display: -webkit-inline-box;
   color : black;
 
   -webkit-background-clip: padding-box; /* for Safari */
   background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+
+  a{
+    text-decoration: none;
+    color: black;
+  }
 }
 
 // Styles for the p tag
@@ -50,6 +55,36 @@
   cursor: pointer;
   box-shadow: 3px 3px rgba(128, 128, 128, 0.3);
 }
+// Dropdown button on hover & focus
+.Dropbtn:hover, .Dropbtn:focus {
+  background-color: #2980B9;
+}
+// The container <div> that is needed to position the dropdown content
+.dropDown {
+  position: relative;
+  display: inline-block;
+}
+// Dropdown Content which is hidden and displays after click
+.DropDownContent {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+// Links inside the dropdown
+.DropDownContent a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+// Change color of dropdown links on hover
+.DropDownContent a:hover {background-color: #ddd;}
+
+// Show the dropdown menu
+.show {display:block;}
 
 //Styles for the channel buttons
 .ChannelBtn{
@@ -57,8 +92,8 @@
 }
 
 .SpeedBtn{
-  text-decoration: none;
-  border-radius: 40%;
+  border: none;
+  border-radius: 30px;
   height: 40px;
   margin: 0px 10px;
   background-color : orange;
@@ -68,7 +103,8 @@
 
 .ChannelBtn1{
   text-decoration: none;
-  border-radius: 40%;
+  border: none;
+  border-radius: 30px;
   height: 40px;
   margin: 0px 10px;
   background-color : red;
@@ -78,7 +114,8 @@
 
 .ChannelBtn2{
   text-decoration: none;
-  border-radius: 40%;
+  border: none;
+  border-radius: 30px;
   height: 40px;
   margin: 0px 10px;
   background-color: purple;
@@ -88,7 +125,8 @@
 
 .ChannelBtn3{
   text-decoration: none;
-  border-radius: 40%;
+  border: none;
+  border-radius: 30px;
   height: 40px;
   margin: 0px 10px;
   background-color: blue;
@@ -97,12 +135,26 @@
 }
 .ChannelBtn4{
   text-decoration: none;
-  border-radius: 40%;
+  border: none;
+  border-radius: 30px;
   height: 40px;
   margin: 0px 10px;
   background-color: green;
   color: white;
   cursor:pointer;
+}
+
+.Crossbtn{
+  color: black;
+  background-color: white;
+  font-size: 15px;
+  border-radius: 50%;
+  margin: 0px 5px;
+  border: 0.5px solid black;
+}
+
+.Crossbtn:focus{
+  background-color: grey;
 }
 
 //This is for the dropdown button
