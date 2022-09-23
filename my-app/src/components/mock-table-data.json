@@ -1,23 +1,23 @@
 [
   {
     "id": 1,
-    "startTime": 0,
-    "endTime": 0,
-    "minStart": 0,
-    "minEnd": 0
+    "startTime": "10:00",
+    "endTime": "10:06",
+    "minStart": "10%",
+    "minEnd": "90%"
   },
   {
     "id": 2,
-    "startTime": 0,
-    "endTime": 0,
-    "minStart": 0,
-    "minEnd": 0
+    "startTime": "10:12",
+    "endTime": "10:18",
+    "minStart": "10%",
+    "minEnd": "90%"
   },
   {
     "id" : 3,
-    "startTime" : 0,
-    "endTime" : 0,
-    "minStart"  : 0,
-    "minEnd" : 0
+    "startTime" : "10:20",
+    "endTime" : "10:26",
+    "minStart": "10%",
+    "minEnd": "90%"
   }
 ]

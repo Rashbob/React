@@ -1,7 +1,7 @@
 //Styles for the Channels class
 .Channels {
   font-weight: bold;
-  display: inline-flex;
+  display: inherit;
   color : black;
 
   -webkit-background-clip: padding-box; /* for Safari */
@@ -10,17 +10,21 @@
 
 // Styles for the p tag
 .p{
-  display:inline-block;
+  color:rgb(128, 128, 128);
+  display:block;
 }
 
 //Styles for choosing a channel
 .ChannelSelect{
   font-weight: bold;
-  display:flex;
+  display:inline-flex;
   color : blue;
-  border: 3px solid rgb(25,34, 25);
-  border: 3px solid rgba(25,34, 25, 0.28);
-  border-radius: 5px;
+  background-color:white;
+  border: 1px solid rgb(128, 128, 128);
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  border-radius: 10px;
+  box-shadow: 2px 3px rgb(128, 128, 128);
+  box-shadow: 2px 3px rgba(128, 128, 128, 0.3);
   padding:5px 0px;
   width:95%;
   length:30%;
@@ -33,16 +37,18 @@
 .ChannelChoice{
   display: none;
   margin: 15px 15px;
+  box-shadow: 2px 3px rgba(128, 128, 128, 0.3);
 }
 
 .Dropbtn{
-  background:none;
-  border: none;
-  width: 5px;
-  length:5px;
+  color: white;
+  background: #c0bebe;
+  border-radius: 10px;
+  font-size: 35px;
+  width: 40px;
+  border:none;
   cursor: pointer;
-  margin: 0px 15px;
-
+  box-shadow: 3px 3px rgba(128, 128, 128, 0.3);
 }
 
 //Styles for the channel buttons

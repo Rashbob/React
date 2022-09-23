@@ -2,19 +2,17 @@ import React from 'react';
 import './App.scss';
 
 import Channels from './components/Channels';
-import Graph from './components/ChannelGraph';
-import ChannelTable from './components/ChannelTable';
+import Graphs from './components/ChannelGraph';
+import GraphChart from "./components/GraphChart";
 import Table from './components/Table';
 
-new ChannelTable("#app");
 
 function App() {
     return(
         <div>
             <Channels />
-            <Graph />
+            <Graphs />
             <Table/>
-            <div id="app"/>
         </div>
     );
 }

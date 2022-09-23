@@ -15,9 +15,44 @@
   background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
 }
 
-form{
+.tableStyles{
+
+  table {
+    border-spacing: 20px;
+    border-radius: 5px;
+  }
+  tr{
+    background-color:white;
+  }
   input{
-    display:none
+    background-color:white;
+    border-radius: 10px;
+  }
+
+  .tableButton{
+    background: grey;
+    color: white;
+    border-radius: 80px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+form{
+  background-color:white;
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  border-radius: 10px;
+  box-shadow: 2px 3px rgba(128, 128, 128, 0.3);
+  input{
+    display:none;
+  }
+  .formButton{
+    background: none;
+    font-size: 50px;
+    color: grey;
+    border:none;
+    cursor: pointer;
   }
 }
 
@@ -33,3 +68,4 @@ form{
   width: 30px;
   height: 30px;
 }
+
